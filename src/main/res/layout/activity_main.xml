@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.oopssang.j_homework.MainActivity">
+
+    <com.test.oopssang.j_homework.view.MySpinner
+        android:id="@+id/my_spinner"
+        android:layout_width="80dp"
+        android:layout_height="50dp">
+
+    </com.test.oopssang.j_homework.view.MySpinner>
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="50dp"
+        android:focusable="true"
+        android:hint="검색어를 입력하세요."
+        android:maxLines="1" />
+
+    <ImageButton
+        android:id="@+id/search_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/search" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_edit"
+        android:background="#ffc"
+        android:focusable="true" />
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+</RelativeLayout>
